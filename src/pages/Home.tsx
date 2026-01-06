@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrench, ClipboardCheck, FileCheck, TriangleAlert, Laptop, Octagon, Search, Clock, MapPin } from 'lucide-react';
+import { Wrench, ClipboardCheck, FileCheck, TriangleAlert, Laptop, Octagon, Search, Clock } from 'lucide-react';
 import Hero from '../components/Hero';
 import Reviews from '../components/Reviews';
 import { reasons } from '../data/content';
