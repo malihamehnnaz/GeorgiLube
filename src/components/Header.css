@@ -2,14 +2,22 @@
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow-sm);
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
+  left: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 2px solid transparent;
   background-image: linear-gradient(white, white), var(--metallic-gradient);
   background-origin: border-box;
   background-clip: padding-box, border-box;
+}
+
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.85); /* More transparent */
+  padding: 0; /* Compact height */
+  box-shadow: var(--shadow-md);
 }
 
 .top-bar {
@@ -20,6 +28,17 @@
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.5px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+  max-height: 50px;
+  opacity: 1;
+}
+
+.top-bar.hidden {
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .top-bar-content {
@@ -28,23 +47,55 @@
   align-items: center;
 }
 
+/* Marquee/Scrolling Text Effect */
+.scrolling-text-container {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.scrolling-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+  color: #e2e8f0;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
 .top-contact a {
   margin-left: 24px;
   color: #cbd5e1;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
+  position: relative;
+  z-index: 10; /* Ensure links stay clickable above marquee */
+  background: var(--dark-metallic); /* Background to cover scrolling text */
+  padding-left: 15px;
 }
 
 .top-contact a:hover {
   color: var(--white);
 }
 
+
 .header-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 20px;
+  transition: padding 0.3s ease;
+}
+
+.header.scrolled .header-main {
+  padding: 10px 20px;
 }
 
 .logo h1 {
@@ -112,11 +163,9 @@
   font-size: 0.85rem;
   letter-spacing: 0.5px;
   box-shadow: var(--shadow-md);
-  background-color: var(--primary-color);
 }
 
 .header-cta .btn-primary:hover {
-  background-color: var(--primary-dark);
   box-shadow: var(--shadow-lg);
   transform: translateY(-1px);
 }

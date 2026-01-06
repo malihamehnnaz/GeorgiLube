@@ -1,0 +1,226 @@
+/* Dark Premium Theme for Tyres Page */
+.tyres-page-wrapper {
+  background-color: #020617; /* Slate 950 */
+  min-height: 100vh;
+  color: white;
+  padding-bottom: 80px;
+}
+
+.tyres-hero-section {
+  padding: 120px 0 80px;
+  background: radial-gradient(circle at 30% 20%, #1e293b 0%, #020617 80%);
+}
+
+.tyres-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  color: white;
+}
+
+.tyres-subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.tyre-img-wrapper {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.tyre-hero-img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.tyre-hero-img:hover {
+  transform: scale(1.05);
+}
+
+/* Brands Section */
+.tyre-brands-section {
+  background: #0f172a; /* Slate 900 */
+  padding: 80px 0;
+  position: relative;
+}
+
+.section-header-center {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title-light {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.section-desc-light {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.tyres-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .tyres-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .tyres-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tyres-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tyre-brand-card {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tyre-brand-card:hover {
+  transform: translateY(-8px);
+  background: rgba(30, 41, 59, 0.6);
+  border-color: #38bdf8;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+.tyre-card-content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.tyre-brand-title {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.tyre-brand-desc {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.btn-tyre-action {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tyre-brand-card:hover .btn-tyre-action {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.tyre-icon-bg {
+  opacity: 0.1;
+  transform: scale(1.5) rotate(-20deg);
+  transition: all 0.5s ease;
+}
+
+.tyre-brand-card:hover .tyre-icon-bg {
+  opacity: 0.2;
+  transform: scale(1.8) rotate(0deg);
+  color: #38bdf8;
+}
+
+/* Highlight Card */
+.highlight-card {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(30, 58, 138, 0.1) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.highlight-card .btn-tyre-action {
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+}
+
+.highlight-card .btn-tyre-action:hover {
+  background: #fff;
+}
+
+.tyre-logo-wrapper {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tyre-brand-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+.tyre-brand-title {
+  color: #f1f5f9; /* Slate 100 - Brighter */
+}
+
+.tyre-brand-desc {
+  color: #e2e8f0; /* Slate 200 - Brighter */
+}
+
+
+.tyre-brand-title {
+  color: #f1f5f9;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5), 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.tyre-brand-desc {
+  color: #e2e8f0;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.highlight-card .tyre-brand-title, 
+.highlight-card .tyre-brand-desc strong {
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.8), 0 0 20px rgba(56, 189, 248, 0.5);
+}
+

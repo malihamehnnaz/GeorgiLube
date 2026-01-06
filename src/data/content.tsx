@@ -85,17 +85,17 @@ export const tyreBrands = [
   {
     name: "Bridgestone",
     desc: "Bridgestone has a range of tyres to suit your lifestyle.",
-    image: "https://tse2.mm.bing.net/th?id=OIP.3fQ_vL9y_4x_8g_9z_0_wHaHa&pid=Api",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Bridgestone_logo.svg",
   },
   {
     name: "Firestone",
     desc: "Always dependable, wherever the journey takes you.",
-    image: "https://tse3.mm.bing.net/th?id=OIP.v_X_5_6_7_8_9_0_1_2_3&pid=Api", 
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/36/Firestone_logo.svg", 
   },
   {
     name: "Dayton",
     desc: "Best value budget tyres for your car, SUV or 4WD.",
-    image: "https://tse4.mm.bing.net/th?id=OIP.A_B_C_D_E_F_G_H_I_J&pid=Api",
+    image: "https://logos-download.com/wp-content/uploads/2016/06/Dayton_Tires_logo.png",
   }
 ];
 

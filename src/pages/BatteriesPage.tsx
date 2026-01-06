@@ -1,36 +1,64 @@
 import React from 'react';
-import { Check } from 'lucide-react';
-import '../components/Services.css'; // Reusing styles
+import { Check, Zap } from 'lucide-react';
+import './BatteriesPage.css';
 
 const BatteriesPage: React.FC = () => {
   return (
-    <div className="page-container" style={{paddingTop: '100px', minHeight: '80vh'}}>
+    <div className="batteries-page-wrapper">
+      <section className="batteries-hero-section">
        <div className="container">
-         <div style={{display: 'flex', gap: '40px', flexWrap: 'wrap', alignItems: 'center'}}>
-            <div style={{flex: 1, minWidth: '300px'}}>
-                <h1 style={{fontSize: '2.5rem', marginBottom: '20px'}}>Mobile Car Battery Replacement</h1>
-                <p style={{fontSize: '1.2rem', marginBottom: '20px', color: '#555'}}>
+         <div className="battery-content-container">
+            <div className="battery-text-content">
+                <div className="badge-tag" style={{display:'inline-block', marginBottom:'20px'}}>Mobile Service</div>
+                <h1 className="battery-title">Mobile Car Battery Replacement</h1>
+                <p className="battery-desc">
                     Stuck with a flat battery? Don't worry, we come to you! 
                     Georgi The Lube Master stocks a range of high-performance batteries 
                     to suit most makes and models.
                 </p>
-                <ul style={{listStyle: 'none', fontSize: '1.1rem', marginBottom: '30px'}}>
-                    <li style={{marginBottom: '10px', display: 'flex', alignItems: 'center'}}><Check size={20} color="var(--primary-color)" style={{marginRight: '10px'}} /> <span><strong>Fast Arrival:</strong> We get you moving again quickly.</span></li>
-                    <li style={{marginBottom: '10px', display: 'flex', alignItems: 'center'}}><Check size={20} color="var(--primary-color)" style={{marginRight: '10px'}} /> <span><strong>Quality Brands:</strong> Long-lasting power you can rely on.</span></li>
-                    <li style={{marginBottom: '10px', display: 'flex', alignItems: 'center'}}><Check size={20} color="var(--primary-color)" style={{marginRight: '10px'}} /> <span><strong>Professional Installation:</strong> Incorrect installation can damage your car's electronics. Trust the experts.</span></li>
-                    <li style={{marginBottom: '10px', display: 'flex', alignItems: 'center'}}><Check size={20} color="var(--primary-color)" style={{marginRight: '10px'}} /> <span><strong>Testing & Disposal:</strong> We test your charging system and dispose of your old battery environmentally.</span></li>
+                <ul className="battery-features-list">
+                    <li className="battery-feature-item">
+                        <div className="feature-icon"><Check size={24} /></div>
+                        <div className="feature-text">
+                            <strong>Fast Arrival</strong>
+                            <span>We get you moving again quickly.</span>
+                        </div>
+                    </li>
+                    <li className="battery-feature-item">
+                        <div className="feature-icon"><Zap size={24} /></div>
+                        <div className="feature-text">
+                            <strong>Quality Brands</strong>
+                            <span>Long-lasting power you can rely on.</span>
+                        </div>
+                    </li>
+                    <li className="battery-feature-item">
+                        <div className="feature-icon"><Check size={24} /></div>
+                        <div className="feature-text">
+                             <strong>Professional Installation</strong>
+                             <span>Incorrect installation can damage electronics. Trust experts.</span>
+                        </div>
+                    </li>
+                    <li className="battery-feature-item">
+                        <div className="feature-icon"><Check size={24} /></div>
+                        <div className="feature-text">
+                             <strong>Testing & Disposal</strong>
+                             <span>We test your charging system & recycle old batteries.</span>
+                        </div>
+                    </li>
                 </ul>
-                <button className="btn-primary" style={{marginBottom: '20px'}}>Get a Battery Quote</button>
+                <button className="btn-battery-primary">Get a Battery Quote</button>
             </div>
-            <div style={{flex: 1, minWidth: '300px'}}>
+            
+            <div className="battery-image-container">
                 <img 
                     src="https://static.where-e.com/United_Kingdom/Foundry-Motors_64b63ac4860eec87786cec16fb9426b4.jpg" 
                     alt="Car Battery Service" 
-                    style={{width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.1)'}}
+                    className="battery-hero-img"
                 />
             </div>
          </div>
        </div>
+      </section>
     </div>
   );
 };

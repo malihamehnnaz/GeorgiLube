@@ -1,0 +1,133 @@
+.preloader-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none; /* Let clicks pass through after exit if needed, but overlay covers it */
+}
+
+.preloader-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #0f172a; /* Slate 900 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: inset(0 0 0 0); /* Full visibility initially */
+  pointer-events: auto;
+}
+
+/* Exit State: The Wipe */
+.preloader-overlay.exit-anim {
+  /* Use transform for better performance and "physical" slide */
+  transform: translateX(100%);
+  transition: transform 3.5s cubic-bezier(0.65, 0, 0.35, 1);
+  animation: none; /* Override any previous animation */
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.preloader-content.fade-content {
+  opacity: 0; /* Fade out content slightly before logic wipe completes if desired, or let it stay to get wiped */
+  /* Actually, let's keep it visible so it gets "eaten" by the wipe */
+  opacity: 1; 
+}
+
+/* ... existing animations ... */
+.logo-icon-animate {
+  color: #38bdf8;
+  margin-bottom: 20px;
+  animation: pulseRotate 2s infinite ease-in-out;
+}
+
+.brand-text {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.8s ease-out forwards 0.2s;
+}
+
+.brand-main { color: #fff; }
+.brand-highlight { color: #f59e0b; margin-left: 8px; }
+
+.loading-line-container {
+  width: 140px;
+  height: 2px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards 0.5s;
+}
+
+.loading-line {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #38bdf8, transparent);
+  transform: translateX(-100%);
+  animation: shimmerLoad 1.5s infinite linear;
+}
+
+/* Moving Tool Animation */
+.moving-tool-container {
+  position: absolute;
+  top: 50%;
+  left: -200px; /* Start further off-screen left */
+  transform: translateY(-50%);
+  z-index: 10000;
+  animation: moveAcross 3.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.moving-tool-icon {
+  filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+  animation: tumbleTool 3.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+/* Keyframes */
+@keyframes wipeRight {
+  0% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 0 0 120%); } /* Ensure it goes fully past screen */
+}
+
+@keyframes moveAcross {
+  0% { left: -200px; }
+  100% { left: 120%; } /* Move off screen right */
+}
+
+@keyframes tumbleTool {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); } /* Full rotation */
+}
+
+@keyframes spinTyre {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(720deg); }
+}
+
+@keyframes pulseRotate {
+  0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+  50% { transform: scale(1.1) rotate(5deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes shimmerLoad {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

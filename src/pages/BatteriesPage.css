@@ -1,0 +1,118 @@
+/* Dark Premium Theme for Batteries Page */
+.batteries-page-wrapper {
+  background-color: #020617; /* Slate 950 */
+  min-height: 100vh;
+  color: white;
+  padding-bottom: 80px;
+}
+
+.batteries-hero-section {
+  padding: 120px 0 80px;
+  background: radial-gradient(circle at 70% 20%, #1e293b 0%, #020617 80%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.battery-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+.battery-text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.battery-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  background: linear-gradient(to right, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.battery-desc {
+  font-size: 1.1rem;
+  color: #94a3b8; /* Slate 400 */
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.battery-features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.battery-feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: rgba(30, 41, 59, 0.4);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.battery-feature-item:hover {
+  transform: translateX(10px);
+  background: rgba(30, 41, 59, 0.6);
+  border-color: #38bdf8;
+}
+
+.feature-icon {
+  color: #38bdf8;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.feature-text strong {
+  color: white;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.feature-text span {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.battery-image-container {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.battery-hero-img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.battery-hero-img:hover {
+  transform: scale(1.02);
+}
+
+.btn-battery-primary {
+  padding: 16px 40px;
+  background: #38bdf8; /* Sky 400 */
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-battery-primary:hover {
+  background: #7dd3fc;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+  transform: translateY(-2px);
+}
