@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrench, Gauge, Battery, Key } from 'lucide-react';
+import { Wrench, Gauge, Battery } from 'lucide-react';
 import './Hero.css';
 import { useNavigate } from 'react-router-dom';
 
