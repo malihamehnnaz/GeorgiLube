@@ -48,7 +48,7 @@
 .hero-text h2 {
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--primary-color); /* Sky Blue */
+  color: var(--primary-color);
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 16px;

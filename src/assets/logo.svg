@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240">
+  <!-- Shield Background -->
+  <path d="M100,5 C40,5 20,40 20,80 C20,150 50,190 100,235 C150,190 180,150 180,80 C180,40 160,5 100,5 Z" fill="#0f172a" stroke="#ea580c" stroke-width="6"/>
+  
+  <!-- "GEORGI" Text (Arched approximation using transforms for simplicity or textPath) -->
+  <path id="curve" d="M40,90 A60,60 0 0,1 160,90" fill="transparent" />
+  <text width="200" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-weight="900" font-size="32" letter-spacing="2">
+    <textPath href="#curve" startOffset="50%">GEORGI</textPath>
+  </text>
+  
+  <!-- Crossed Wrenches -->
+  <g transform="translate(100, 110)">
+    <!-- Wrench 1 -->
+    <g transform="rotate(45)">
+      <rect x="-6" y="-35" width="12" height="50" rx="2" fill="#e2e8f0" />
+      <path d="M-10,-45 L-10,-30 L10,-30 L10,-45 L4,-45 L4,-38 L-4,-38 L-4,-45 Z" fill="#e2e8f0" /> <!-- Head top -->
+       <path d="M-12,-48 C-15,-48 -15,-30 -8,-25 L-4,-15 L4,-15 L8,-25 C15,-30 15,-48 12,-48" fill="#e2e8f0" />
+    </g>
+    <!-- Wrench 2 -->
+    <g transform="rotate(-45)">
+      <rect x="-6" y="-35" width="12" height="50" rx="2" fill="#e2e8f0" />
+       <path d="M-12,-48 C-15,-48 -15,-30 -8,-25 L-4,-15 L4,-15 L8,-25 C15,-30 15,-48 12,-48" fill="#e2e8f0" />
+    </g>
+  </g>
+
+  <!-- Banner -->
+  <path d="M10,165 L190,165 L180,195 L20,195 Z" fill="#ea580c" />
+  <path d="M10,165 L30,150 L30,165 Z" fill="#9a3412" /> <!-- Fold Left -->
+  <path d="M190,165 L170,150 L170,165 Z" fill="#9a3412" /> <!-- Fold Right -->
+
+  <!-- "THE LUBE MASTER" Text -->
+  <text x="100" y="186" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-weight="bold" font-size="16">THE LUBE MASTER</text>
+
+  <!-- Stars -->
+  <g fill="#ea580c" transform="translate(0, 5)">
+    <polygon points="100,205 104,215 114,215 106,222 109,232 100,226 91,232 94,222 86,215 96,215" />
+    <polygon points="75,200 79,210 89,210 81,217 84,227 75,221 66,227 69,217 61,210 71,210" transform="scale(0.8) translate(30,10)" />
+    <polygon points="125,200 129,210 139,210 131,217 134,227 125,221 116,227 119,217 111,210 121,210" transform="scale(0.8) translate(110,10)" />
+  </g>
+</svg>

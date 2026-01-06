@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import logo from '../assets/logo-real.jpeg';
 import './Header.css';
 
 const Header: React.FC = () => {
@@ -19,8 +20,7 @@ const Header: React.FC = () => {
       <div className="container header-main">
         <Link to="/" className="logo-link">
           <div className="logo">
-            <h1>Georgi The Lube Master</h1>
-            <span className="tagline">Mobile Mechanics You Can Trust</span>
+            <img src={logo} alt="Georgi The Lube Master" style={{height: '80px', width: 'auto'}} />
           </div>
         </Link>
         <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>

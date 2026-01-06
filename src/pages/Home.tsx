@@ -34,12 +34,6 @@ const Home: React.FC = () => {
                 <p className="step-desc">All our vans are equipped to deal with a wide range of mechanical issues.</p>
              </div>
 
-             <div className="step-card">
-                <div className="step-icon"><MapPin size={48} className="text-primary" /></div>
-                <h3 className="step-title">Confirm your location</h3>
-                <p className="step-desc">A Georgi Lube Master mechanic will be with you soon!</p>
-             </div>
-
           </div>
         </div>
       </section>

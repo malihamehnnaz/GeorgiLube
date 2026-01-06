@@ -6,16 +6,20 @@
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 2px solid transparent;
+  background-image: linear-gradient(white, white), var(--metallic-gradient);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .top-bar {
-  background-color: var(--secondary-color); /* Dark slate for contrast */
-  color: #94a3b8;
+  background: var(--dark-metallic);
+  color: #e2e8f0;
   border-bottom: none;
   padding: 10px 0;
   font-size: 0.85rem;
   font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .top-bar-content {
@@ -44,7 +48,9 @@
 }
 
 .logo h1 {
-  color: var(--secondary-color);
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 1.75rem;
   margin: 0;
   line-height: 1;
